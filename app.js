@@ -1,4 +1,4 @@
-const GAS_WEB_APP_URL = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzZr-aS7XIac_ceI5-AzcPs_QtGwacbhGXRVRyhy69Uz9fTs29PpDBkQVqQp7D3EHKILQ/exec';
 
 const QUESTIONS = [
   {
