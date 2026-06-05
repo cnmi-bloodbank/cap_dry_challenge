@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAP Dry Challenge JE-14</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar no-print">
+      <div>
+        <div class="eyebrow">Dry Challenge (JE1)</div>
+        <h1>CAP Dry Challenge - JE-14</h1>
+      </div>
+      <div class="top-actions">
+        <button id="btnReload" class="ghost-btn">โหลดข้อมูล</button>
+        <button id="btnPrint" class="primary-btn">พิมพ์ / Save PDF</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card no-print">
+        <h2>ข้อมูลผู้ทำข้อสอบ</h2>
+        <div class="grid two">
+          <label>ชื่อพนักงาน
+            <input id="fullName" type="text" placeholder="เช่น น.ส. ..." />
+          </label>
+          <label>รหัสพนักงาน
+            <input id="empCode" type="text" placeholder="เช่น 12345" />
+          </label>
+        </div>
+        <div class="hint">กรอกชื่อและรหัสพนักงานก่อนบันทึกหรือโหลดคำตอบเดิม</div>
+      </section>
+
+      <section class="card exam-print-area" id="reportArea">
+        <div class="report-header only-print">
+          <h1>CAP Dry Challenge - JE-14 Report</h1>
+          <p><b>ชื่อพนักงาน:</b> <span data-print="fullName">-</span> &nbsp; <b>รหัสพนักงาน:</b> <span data-print="empCode">-</span></p>
+        </div>
+
+        <h2>DRY CHALLENGE (JE1)</h2>
+        <p>Dry challenges are PT/EQA specimens that are provided as an opportunity for laboratories to perform an analysis when it is not possible to provide a physical specimen.</p>
+
+        <h3>CASE STUDY</h3>
+        <p>A 45-year-old male with interstitial lung disease was admitted for double lung transplant. His pre-operative hemoglobin was 10.2 g/dL (reference range: 13.7 – 17.5 g/dL). The patient had no history of transfusions or red cell alloantibodies. Blood bank testing performed with automated column agglutination technology on the morning of surgery showed Group A, Rh-positive blood type and a negative antibody screen. The cadaveric organ donor was Group O, Rh-positive. The patient received two units of packed red blood cells (RBCs) in the perioperative period. No other blood products were administered.</p>
+        <p>On post-operative day 10, the patient appeared jaundiced. Laboratory testing revealed indirect hyperbilirubinemia, an elevated lactate dehydrogenase, and an abrupt decrease in hemoglobin from the day prior (from 9.0 g/dL to 6.9 g/dL). The clinical team ordered a type and crossmatch for one RBC unit, as well as a direct antiglobulin test (DAT). Results of the serological testing are shown below.</p>
+
+        <h3>ABO/Rh:</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Anti-A</th><th>Anti-B</th><th>Anti-D</th><th>A1 cells</th><th>B cells</th></tr></thead>
+            <tbody><tr><td>4+</td><td>0</td><td>4+</td><td>2+</td><td>4+</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>Antibody screen:</h3>
+        <div class="table-wrap small-table">
+          <table>
+            <thead><tr><th></th><th>Result</th></tr></thead>
+            <tbody><tr><td>SC1</td><td>0</td></tr><tr><td>SC2</td><td>0</td></tr><tr><td>SC3</td><td>0</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>DAT:</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Polyspecific</th><th>Anti-IgG</th><th>Anti-C3d</th></tr></thead>
+            <tbody><tr><td>3+</td><td>3+</td><td>2+</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>Eluate panel (tube testing in PEG):</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th></th><th>AHG</th><th>CC</th><th>LW</th></tr></thead>
+            <tbody>
+              <tr><td>SC1</td><td>0</td><td>4+</td><td>0 √</td></tr>
+              <tr><td>SC2</td><td>0</td><td>4+</td><td>0 √</td></tr>
+              <tr><td>SC3</td><td>0</td><td>4+</td><td>0 √</td></tr>
+              <tr><td>A1 cells #1</td><td>3+</td><td>NT</td><td>0 √</td></tr>
+              <tr><td>A1 cells #2</td><td>3+</td><td>NT</td><td>0 √</td></tr>
+              <tr><td>A1 cells #3</td><td>3+</td><td>NT</td><td>0 √</td></tr>
+              <tr><td>B cells #1</td><td>0</td><td>4+</td><td>0 √</td></tr>
+              <tr><td>B cells #2</td><td>0</td><td>4+</td><td>0 √</td></tr>
+              <tr><td>B cells #3</td><td>0</td><td>4+</td><td>0 √</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">AHG: anti-human globulin; CC: check cell; LW: last wash; NT: not tested; SC: screen cell</p>
+
+        <h3>Additional studies:</h3>
+        <p>Anti-A1 antibodies were detected in the patient’s plasma by indirect antiglobulin testing (IAT).</p>
+        <p>The patient’s pre-transfusion specimen was A1 lectin-positive (4+).</p>
+
+        <hr />
+        <h2>Dry Challenge - JE-14</h2>
+        <div id="questions"></div>
+      </section>
+
+      <section class="card no-print admin-card">
+        <h2>ส่วน Admin: ใส่เฉลยหลัง CAP เผยแพร่</h2>
+        <div class="grid two">
+          <label>Admin PIN
+            <input id="adminPin" type="password" placeholder="ตั้งไว้ใน Code.gs" />
+          </label>
+          <label>สถานะเฉลย
+            <select id="keyPublished">
+              <option value="FALSE">ยังไม่เผยแพร่</option>
+              <option value="TRUE">เผยแพร่เฉลยแล้ว</option>
+            </select>
+          </label>
+        </div>
+        <div id="answerKeyForm" class="answer-key-form"></div>
+        <button id="btnSaveKey" class="ghost-btn">บันทึกเฉลย</button>
+      </section>
+
+      <div class="sticky-actions no-print">
+        <button id="btnSave" class="primary-btn">บันทึกคำตอบ</button>
+        <button id="btnReview" class="ghost-btn">บันทึกเหตุผลทบทวน</button>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast no-print"></div>
+  <script src="app.js"></script>
+</body>
+</html>
